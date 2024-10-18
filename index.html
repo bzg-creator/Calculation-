@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groom System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="options">
+        <label for="cars">Choose an education:</label>
+        <select name="Education" id="Education">
+            <option value="Bride">Bride </option>
+            <option value="Groom">Groom</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="education">Education:</label>
+        <select id="education_degree">
+            <option value="under">Undergraduate degree (Mult 1.5x)</option>
+            <option value="coll">College degree (Mult 1.2x)</option>
+            <option value="high">High school degree (Mult 1.05x)</option>
+            <option value="mid">Middle school degree (Mult 0.9x)</option>
+        </select>
+        <br>
+
+        <label for="net-worth">Family Net Worth:</label>
+        <select id="net-worth">
+            <option value="more_10000">More than 10,000$ (Mult 2x)</option>
+            <option value="more_5000">Between 5,000$ and 10,000$(Mult 1.5x)</option>
+            <option value="less_500">Less than 5,000$(Mult 1.2x)</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="caste">Caste:</label>
+        <select id="caste">
+            <option value="100">Brahmin(+100$)</option>
+            <option value="50">Kshatriya(+50$)</option>
+            <option value="20">Vaishya(+20$)</option>
+            <option value="10">Shudra(+10$)</option>
+            <option value="-50">Varna - untouchable(-50$)</option>
+        </select>
+        <br>
+        <br>
+
+        <label>Skills:</label><br>
+        <input type="checkbox" id="musical"> Plays a musical instrument (+10$)<br>
+        <input type="checkbox" id="cook"> Good cook (+20$)<br>
+        <input type="checkbox" id="character"> Easygoing character (+15$)<br>
+        <input type="checkbox" id="sings"> Sings well (+10$)<br>
+        <br>
+        <br>
+
+        <label>Age:</label><br>
+        <input type="radio" name="age" value="1.5"> 18-23 (coefficient 1.5)<br>
+        <input type="radio" name="age" value="1.2"> 24-27 (coefficient 1.2)<br>
+        <input type="radio" name="age" value="0.95"> 28+ (coefficient 0.95)<br>
+        <br>
+        <br>
+
+        <label>Reputation:</label><br>
+        <input type="checkbox" id="gossip-parents"> Gossips about parents (coefficient 0.85)<br>
+        <input type="checkbox" id="gossip-character"> Gossips about character (coefficient 0.9)<br>
+        <input type="checkbox" id="general-gossip"> General gossips (-20$)<br>
+        <br>
+        <br>
+
+        <button id="calculate_final" onclick="calculateTotalPrice()">Calculate the Final Price</button>
+
+        
+        <div id="final_price_display">Final Price: $0.00</div>
+
+        <script src="index.js"></script>
+    </div>
+</body>
+</html>
